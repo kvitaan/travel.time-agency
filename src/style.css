@@ -347,3 +347,35 @@ footer {
     border-top: 1px solid rgb(190, 155, 200) ;
     padding: 10px 0 0 0;
 }
+
+
+/* gallery */
+
+.gallery-list {
+    background-color: white;
+    margin: 0 200px;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 40px 80px 40px;
+    text-align: center;
+    padding: 60px;
+    scroll-snap-type: y;
+    overflow-y: auto;
+}
+
+.gallery-list h2 {
+    font-size: 20px;
+    color: rgb(126, 84, 139);
+}
+
+.gallery-list span{
+    font-size: 16px;
+    margin-left: 20px;
+    color: rgb(190, 155, 200);
+    border-left: 2px rgb(190, 155, 200) solid;
+    padding: 0 0 0 16px;
+}
+
+.gallery-list img {
+    width: 50%;
+    margin-bottom: 30px;
+}
