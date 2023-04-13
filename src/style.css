@@ -7,6 +7,7 @@ font-family: 'Poppins', sans-serif;
  */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -14,6 +15,11 @@ body {
 }
 
 /* гедер навігація і так далі */
+
+header {
+    text-align: center;
+}
+
 nav, ul {
     list-style: none;
 }
@@ -21,7 +27,6 @@ nav, ul {
 nav {
     position: relative;
     display: inline;
-    margin-left: 460px;
 }
 
 nav > li {
@@ -34,6 +39,8 @@ header > span {
     color: rgb(126, 84, 139);
     font-family:'EB Garamond', serif;
     font-size: 30px;
+    margin-right: 80px;
+    padding-left: 30px;
 }
 
 a {
@@ -231,6 +238,11 @@ input {
     font-family: 'Poppins', sans-serif;
 }
 
+.required {
+    border: none !important;
+    color: rgb(255, 78, 78);
+}
+
 ::placeholder {
     color: rgb(189, 189, 189, 0.5);
     opacity: 1;
@@ -311,10 +323,9 @@ footer {
 }
 
 .our-tours-list ul {
-    margin: 0 30px 0 0;
-    width: 420px;
+    margin: auto;
+    max-width: 420px;
     display: inline-block;
-    margin: 0 20px 0 0;
     padding: 0;
 }
 
@@ -381,26 +392,27 @@ footer {
     padding: 0 0 0 16px;
 }
 
-.gallery-list img {
+.gallery-list ul img {
     width: 90%;
     margin-bottom: 30px;
     object-fit: contain;
     transition: ease-in-out;
 }
 
-.gallery-list img:hover {
+.gallery-list ul img:hover {
     overflow: hidden;
-    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     opacity: 0.5;
 }
 
 .gallery-list li {
-    min-width: 400px;
+    min-width: 500px;
 }
 
 .gallery-list ul {
     display: flex;
     overflow-x:auto;
+    scroll-behavior: smooth;
 }
 .gallery-list ul::-webkit-scrollbar-thumb {
     background-color: rgb(190, 155, 200);
@@ -411,3 +423,26 @@ footer {
 .gallery-list ul::-webkit-scrollbar {
     background-color: rgb(190, 155, 200, 0.5);
 }
+
+/* gallery list arrows */
+
+.right-arrow {
+    rotate: 180deg;
+}
+
+.right-arrow, .left-arrow {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    margin: 40px 20px 0 20px;
+    cursor: pointer;
+    transition: ease-in-out;
+    object-fit: contain;
+}
+
+.right-arrow:hover, .left-arrow:hover {
+    overflow: hidden;
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
