@@ -228,7 +228,13 @@ input {
     height: 24px;
     border: 1px gray solid;
     transition: 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
 }
+
+::placeholder {
+    color: rgb(189, 189, 189, 0.5);
+    opacity: 1;
+  }
 
 textarea {
     width: 100%;
@@ -376,6 +382,32 @@ footer {
 }
 
 .gallery-list img {
-    width: 50%;
+    width: 90%;
     margin-bottom: 30px;
+    object-fit: contain;
+    transition: ease-in-out;
+}
+
+.gallery-list img:hover {
+    overflow: hidden;
+    -webkit-transform: scale(1.05);
+    opacity: 0.5;
+}
+
+.gallery-list li {
+    min-width: 400px;
+}
+
+.gallery-list ul {
+    display: flex;
+    overflow-x:auto;
+}
+.gallery-list ul::-webkit-scrollbar-thumb {
+    background-color: rgb(190, 155, 200);
+}
+.gallery-list ul::-webkit-scrollbar-track {
+    background-color: rgb(190, 155, 200, 0.5);
+}
+.gallery-list ul::-webkit-scrollbar {
+    background-color: rgb(190, 155, 200, 0.5);
 }
